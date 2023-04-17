@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CountriesService} from "./services/countries.service";
+import {CountryMapper} from "./mappers/country.mapper";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.countriesService.fetchAllCountries().subscribe(res => {
-      console.log(res);
+      console.log(CountryMapper.fromCountryDtoToCountry(res));
     })
   }
 }
