@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CountriesService} from "./services/countries.service";
 import {CountryMapper} from "./mappers/country.mapper";
+import {Country} from "./models/country.model";
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,16 @@ import {CountryMapper} from "./mappers/country.mapper";
 })
 export class AppComponent implements OnInit{
   title = 'countries-app';
+  regions = ['Europe', 'Asia'];
+  countries: Array<Country> = [];
 
   constructor(private countriesService: CountriesService) {
   }
 
   ngOnInit() {
     this.countriesService.fetchAllCountries().subscribe(res => {
-      console.log(CountryMapper.fromCountryDtoToCountry(res));
+      this.countries = CountryMapper.fromCountryDtoToCountry(res);
+      // console.log(CountryMapper.fromCountryDtoToCountry(res));
     })
   }
 }
