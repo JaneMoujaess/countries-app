@@ -1,0 +1,23 @@
+<div class="page-layout">
+
+  <div class="regions-container">
+    <mat-card class="region-card" *ngFor="let region of regions">
+      <div class="region-title">{{region}}</div>
+    </mat-card>
+  </div>
+
+  <div class="cards-container">
+    <mat-card *ngFor="let country of countries">
+      <mat-card-content>
+        <div>
+          <img [src]="country.flag">
+        </div>
+        <div>
+          {{country.name}}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+

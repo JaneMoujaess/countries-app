@@ -1,0 +1,47 @@
+.page-layout{
+  background-color: #e2e4f1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  row-gap: 25px;
+}
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+  flex: auto;
+  overflow-y: auto;
+  .mat-card{
+    display: flex;
+    flex: auto;
+    background-color: #FFFFFF;
+    color: #000000;
+    .mat-card-content{
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
+      align-items: center;
+      img{
+        height: 25px;
+      }
+    }
+  }
+}
+.regions-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  .region-card{
+    height: 300px;
+    flex: auto;
+    background-color: #FFFFFF;
+    .region-title{
+      color: #000000;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+}
