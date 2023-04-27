@@ -1,4 +1,4 @@
-.page-layout{
+.page-layout {
   background-color: #e2e4f1;
   padding: 25px;
   display: flex;
@@ -6,7 +6,7 @@
   height: 100vh;
   row-gap: 25px;
 }
-.cards-container{
+.cards-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,34 +14,40 @@
   row-gap: 5px;
   flex: auto;
   overflow-y: auto;
-  .mat-card{
+  .mat-card {
     display: flex;
     flex: auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #000000;
-    .mat-card-content{
+    .mat-card-content {
       display: flex;
       flex-direction: row;
       column-gap: 10px;
       align-items: center;
-      img{
+      img {
         height: 25px;
       }
     }
   }
 }
-.regions-container{
+.regions-container {
   display: flex;
   flex-direction: row;
   column-gap: 20px;
-  .region-card{
+  .region-card {
     height: 300px;
     flex: auto;
-    background-color: #FFFFFF;
-    .region-title{
+    background-color: #ffffff;
+    .region-title {
       color: #000000;
       text-align: center;
       font-size: 30px;
     }
   }
+}
+
+.highlighted {
+  height: 100%;
+  background-color: yellow;
+  color: red;
 }
